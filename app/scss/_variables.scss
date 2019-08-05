@@ -1,0 +1,17 @@
+// Medias querys
+$breakpoints: (
+  'xs': "(min-width: 0px) and (max-width: 575px)",
+  'sm': "(min-width: 576px) and (max-width: 767px)",
+  'md': "(min-width: 768px) and (max-width: 991px)",
+  'lg': "(min-width: 992px) and (max-width: 1199px)",
+  'xl': "(min-width: 1200px)",
+) !default;
+
+// Fonts
+
+
+// Colors
+$primary: #cd416c;
+$light_blue: #df749c;
+$white: #fff;
+$black: #202020;

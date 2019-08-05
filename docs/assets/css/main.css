@@ -1,0 +1,47 @@
+.navbar {
+  height: 100px;
+}
+
+.navbar .nav-link {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: #cd416c;
+}
+
+.navbar img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+.navbar-nav {
+  width: 50%;
+}
+
+.navbar-nav:first-child {
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.navbar-nav:last-child {
+  margin-left: 100px;
+}
+
+.sidebar-category {
+  width: 30%;
+  background-color: #df749c;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.nav-paginator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+a:hover {
+  text-decoration: none;
+}
