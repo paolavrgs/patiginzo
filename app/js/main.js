@@ -1,5 +1,5 @@
 WebFont.load({
   google: {
-    families: []
+    families: ['Merriweather:400,700', 'Prata', 'Roboto']
   }
 });

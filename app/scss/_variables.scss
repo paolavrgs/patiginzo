@@ -8,10 +8,18 @@ $breakpoints: (
 ) !default;
 
 // Fonts
-
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 // Colors
 $primary: #cd416c;
-$light_blue: #df749c;
+$secondary: #df749c;
 $white: #fff;
 $black: #202020;
+$body-text: #5a5656;
+
+$body-font: 'Roboto', sans-serif;
+$heading-font: 'Prata', serif;
+
+$shadow: rgba(0,0,0,.1);

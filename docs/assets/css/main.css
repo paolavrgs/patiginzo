@@ -1,47 +1,331 @@
-.navbar {
-  height: 100px;
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Prata&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+/* 4. Header */
+.header-area.main-header {
+  padding: 15px 0;
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 5%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .nav-link {
-  text-transform: uppercase;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  color: #cd416c;
+.logo-area img {
+  width: 100px;
 }
 
-.navbar img {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-}
-
-.navbar-nav {
-  width: 50%;
-}
-
-.navbar-nav:first-child {
-  justify-content: flex-end;
-  margin-right: 100px;
-}
-
-.navbar-nav:last-child {
-  margin-left: 100px;
-}
-
-.sidebar-category {
-  width: 30%;
-  background-color: #df749c;
-  padding: 20px;
-  margin-right: 20px;
-}
-
-.nav-paginator {
-  width: 100%;
+.menu-flex {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* 3. Main Menu */
+.main-menu ul {
+  float: right;
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-menu ul {
+    display: none;
+    float: left;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 4;
+    background: #202020;
+    width: 40%;
+    padding: 20px 20px 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-menu ul {
+    display: none;
+    float: left;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 4;
+    background: #202020;
+    width: 100%;
+    padding: 20px 20px 30px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-menu ul {
+    display: none;
+    float: left;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 4;
+    background: #202020;
+    width: 100%;
+    padding: 20px 20px 30px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .main-menu ul {
+    display: none;
+    float: left;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 4;
+    background: #202020;
+    width: 100%;
+    padding: 20px 20px 30px;
+  }
+}
+
+.main-menu ul li {
+  display: inline;
+  position: relative;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-menu ul li {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-menu ul li {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-menu ul li {
+    display: block;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .main-menu ul li {
+    display: block;
+  }
+}
+
+.main-menu ul li a {
+  color: #cd416c;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 15px;
+}
+
+.main-menu .menu-btn {
+  display: inline;
+  margin-left: 60px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-menu .menu-btn {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-menu .menu-btn {
+    margin-left: 0;
+  }
+
+  .main-menu .menu-btn .login {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-menu .menu-btn {
+    margin-left: 0;
+  }
+
+  .main-menu .menu-btn .login {
+    display: block;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .main-menu .menu-btn {
+    margin-left: 0;
+  }
+
+  .main-menu .menu-btn .login {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-menu.main-menu-light ul {
+    background: #080b1c;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-menu.main-menu-light ul {
+    background: #080b1c;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .main-menu.main-menu-light ul {
+    background: #080b1c;
+  }
+}
+
+.main-menu.main-menu-light a {
+  color: #fff;
+}
+
+.custom-navbar {
+  position: absolute;
+  top: -42px;
+  right: 15px;
+  background: #cd416c;
+  padding: 7px 10px;
+  border-radius: 3px;
+  transition: all ease-in-out .2s;
+  cursor: pointer;
+  display: none;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .custom-navbar {
+    top: 0;
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .custom-navbar {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .custom-navbar {
+    display: block;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .custom-navbar {
+    display: block;
+  }
+}
+
+.custom-navbar span {
+  background: #fff;
+  display: block;
+  width: 30px;
+  margin: 6px 0;
+  height: 2px;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+h1 {
+  font-family: "Prata", serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  padding: 0 10%;
+}
+
+.about-square {
+  position: relative;
+}
+
+.about-square::before {
+  border: 3px solid #cd416c;
+  position: absolute;
+  width: calc(100% + 40px);
+  left: -40px;
+  z-index: -1;
+  height: 100%;
+  content: '';
+  bottom: -4px;
+}
+
+.banner-home {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  margin-top: -50px;
+}
+
+.banner-home img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner-home h2 {
+  position: absolute;
+  font-family: "Prata", serif;
+  color: #cd416c;
+  font-size: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.about {
+  padding-top: 100px;
+  display: flex;
+}
+
+.about p {
+  font-size: 24px;
+  position: absolute;
+  bottom: 0;
+}
+
+.about .about-text, .about .about-img {
+  width: 50%;
+}
+
+.about .about-text {
+  position: relative;
+  height: 350px;
+  background-color: white;
+}
+
+.about .about-text h1 {
+  position: relative;
+  top: 50px;
+}
+
+.about .about-text img {
+  position: absolute;
+  left: 200px;
+  top: 0;
+  height: 150px;
+}
+
+.about .about-img img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.products {
+  padding-top: 100px;
 }

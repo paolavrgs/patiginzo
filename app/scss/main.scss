@@ -1,4 +1,5 @@
 @import 'bourbon';
+@import 'mixins';
 @import 'variables';
 
 @import 'navbar';
@@ -7,4 +8,96 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+h1 {
+  font-family: $heading-font;
+}
+
+p {
+  font-family: $body-font;
+}
+
+.wrapper {
+  padding: 0 10%;
+}
+
+.about-square {
+  position: relative;
+
+  &::before {
+    border: 3px solid $primary;
+    position: absolute;
+    width: calc(100% + 40px);
+    left: -40px;
+    z-index: -1;
+    height: 100%;
+    content: '';
+    bottom: -4px;
+  }
+}
+
+.banner-home {
+  @include size(100%, 90vh);
+  position: relative;
+  margin-top: -50px;
+
+  img {
+    @include size(100%);
+    object-fit: cover;
+  }
+
+  h2 {
+    position: absolute;
+    font-family: $heading-font;
+    color: $primary;
+    font-size: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+  }
+}
+
+.about {
+  padding-top: 100px;
+  display: flex;
+
+  p {
+    font-size: 24px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .about-text, .about-img {
+    width: 50%;
+  }
+
+  .about-text {
+    position: relative;
+    height: 350px;
+    background-color: white;
+
+    h1 {
+      position: relative;
+      top: 50px;
+    }
+
+    img {
+      position: absolute;
+      left: 200px;
+      top: 0;
+      height: 150px;
+    }
+  }
+
+  .about-img {
+    img {
+      @include size(100%, 300px);
+      object-fit: cover;
+    }
+  }
+}
+
+.products {
+  padding-top: 100px;
 }
