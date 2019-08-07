@@ -3,15 +3,49 @@
   .wrapper
     = Haml::Engine.new(File.read("app/partials/_navbar.haml")).render()
     .banner-home
+      .banner-mask
       %img{ src: 'assets/img/IMG_0571.jpg', alt: '' }
-    %section.about
-      .about-text.about-square
+  %section.about
+    .container.d-flex
+      .about-text
         %h1 ¿Qué es?
         %img{ src: 'assets/img/logo.jpg', alt: 'La Caja de Pati' }
         %p La idea de poder compartir siempre ha sido gran parte de lo que ha llevado haciendo Pati en su vida, está en su esencia, en lo que la gente puede entender en sus redes sociales.
       .about-img
         %img{ src: 'assets/img/cajas.png', alt: 'La Caja de Pati' }
-    %section.blog
-
+  %section.blog
+    .container
+      %h1 Blog
+      .row.d-flex
+        - 3.times do
+          .col-md-4.d-flex
+            .blog-entry.justify-content-end
+              %a.block-20{href: "blog-single.html", style: "background-image: url('https://images.unsplash.com/photo-1562887189-e5d078343de4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80');"}
+              .text.p-4.float-right.d-block
+                .d-flex.align-items-center.pt-2.mb-4
+                  .one
+                    %span.day 07
+                  .two
+                    %span.mos Agosto
+                    %span.yr 2019
+                %h3.heading.mt-2
+                  %a{href: "#"} Why Lead Generation is Key for Business Growth
+                %p A small river named Duden flows by their place and supplies it with the necessary regelialia.
+  %section.faq
+    .container
+      %h1 Preguntas Frecuentes
+      .row
+        .col-lg-8.mx-auto
+          #faq.accordion
+            - 4.times do |x|
+              .card
+                .card-header{ id: "heading-#{x}" }
+                  %h5.mb-0
+                    %button.btn.btn-link.faq-btn{"aria-controls" => "collapse-#{x}", "aria-expanded" => "#{x.eql?(0) ? 'true' : 'false'}", "data-target" => "#collapse-#{x}", "data-toggle" => "collapse", type: "button"}
+                      How does this work?
+                      %i.fa.fa-chevron-down
+                .collapse{ class: "#{x.eql?(0) ? 'show' : ''}", id: "collapse-#{x}", "aria-labelledby" => "heading-#{x}", "data-parent" => "#faq"}
+                  .card-body
+                    %p Dentro de esta caja, podrás encontrar entre 6 u 8 productos de primer nivel, los que serán previamente filtrados para entregar solo productos en los que creemos y estamos seguras de que serán lo tu necesitas. 
 = Haml::Engine.new(File.read("app/partials/_footer.haml")).render()
 = Haml::Engine.new(File.read("app/partials/_scripts.haml")).render()
