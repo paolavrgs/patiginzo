@@ -1,26 +1,52 @@
 = Haml::Engine.new(File.read("app/partials/_head.haml")).render()
 %body
-  .wrapper
-    = Haml::Engine.new(File.read("app/partials/_navbar.haml")).render()
-    .banner-home
-      .banner-mask
-      %img{ src: 'assets/img/IMG_0571.jpg', alt: '' }
-  %section.about
+  = Haml::Engine.new(File.read("app/partials/_navbar.haml")).render()
+  .banner-home
+    .banner-mask
+      %h1 Un box que estará lleno de inspiración, clase, aspiraciones y sueños
+    %img{ src: 'assets/img/IMG_0566.jpg', alt: '' }
+  %section.about{style:'padding-top:100px;'}
     .container.d-flex
       .about-text
         %h1 ¿Qué es?
-        %img{ src: 'assets/img/logo.jpg', alt: 'La Caja de Pati' }
         %p La idea de poder compartir siempre ha sido gran parte de lo que ha llevado haciendo Pati en su vida, está en su esencia, en lo que la gente puede entender en sus redes sociales.
       .about-img
         %img{ src: 'assets/img/cajas.png', alt: 'La Caja de Pati' }
+  %section.products
+    .container
+      .title-lines-main.text-center
+        %h3
+          %span.text Producto Destacado
+      .product-banner{ style: "background-image: url('https://images.unsplash.com/photo-1559980828-dc98e2c105d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');" }
+        .product-banner-figure
+          .product-banner-content
+            %h2
+              La Caja de Pati Deluxe
+              %span.after
+            %p Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante. Etiam rhoncus. Maecenas tempus, tellus eget condimentum oncus, sem quam semper. Aenean vulputate eleifend tellus. Aenean leo ligula
+            %a.btn.template-btn{href:''}
+              %i.fa.fa-shopping-cart
+              Comprar
+  %section.unboxing
+    .maxw-770
+      .video-wrap{ style: 'background-image: url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1065&q=80");' }
+        %a.icon-video{href: "#"}
+          %i.fa.fa-play{"aria-hidden" => "true"}
+    .cta-wrapper
+      .container
+        .maxw-770
+          .cta-wrapper-content
+            %h1 ¡Ya está aquí La Caja de Pati!
   %section.blog
     .container
-      %h1 Blog
+      .title-lines-main.text-center
+        %h3
+          %span.text Blog
       .row.d-flex
         - 3.times do
           .col-md-4.d-flex
             .blog-entry.justify-content-end
-              %a.block-20{href: "blog-single.html", style: "background-image: url('https://images.unsplash.com/photo-1562887189-e5d078343de4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80');"}
+              %a.block-20{href: "#", style: "background-image: url('https://images.unsplash.com/photo-1562887189-e5d078343de4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80');"}
               .text.p-4.float-right.d-block
                 .d-flex.align-items-center.pt-2.mb-4
                   .one
@@ -32,8 +58,21 @@
                   %a{href: "#"} Why Lead Generation is Key for Business Growth
                 %p A small river named Duden flows by their place and supplies it with the necessary regelialia.
   %section.faq
+    .team-svg.d-none.d-sm-block
+      .svgs.parallax
+        %img.vector.pos-1{src: "assets/img/square.svg"}/
+        %img.vector.pos-2{src: "assets/img/rectangular-shape-outline.svg"}/
+        %img.vector.pos-3{src: "assets/img/triangle.svg"}/
+        %img.vector.pos-4{src: "assets/img/triangle.svg"}/
+        %img.vector.pos-5{src: "assets/img/rectangular-shape-outline.svg"}/
+        %img.vector.pos-6{src: "assets/img/square.svg"}/
+        %img.vector.pos-7{src: "assets/img/square.svg"}/
+        %img.vector.pos-8{src: "assets/img/triangle.svg"}/
+        %img.vector.pos-9{src: "assets/img/triangle.svg"}/
     .container
-      %h1 Preguntas Frecuentes
+      .title-lines-main.text-center
+        %h3
+          %span.text Preguntas Frecuentes
       .row
         .col-lg-8.mx-auto
           #faq.accordion
@@ -47,5 +86,18 @@
                 .collapse{ class: "#{x.eql?(0) ? 'show' : ''}", id: "collapse-#{x}", "aria-labelledby" => "heading-#{x}", "data-parent" => "#faq"}
                   .card-body
                     %p Dentro de esta caja, podrás encontrar entre 6 u 8 productos de primer nivel, los que serán previamente filtrados para entregar solo productos en los que creemos y estamos seguras de que serán lo tu necesitas. 
+  %section.brands
+    .container
+      .title-lines-main.text-center
+        %h3
+          %span.text Clientes aliados
+      .multiple-items
+        %img.brand-img{ src: 'http://enginir-demo.creativesplanet.com/oilgas/wp-content/uploads/sites/7/2018/11/client-1.png', alt: 'Logo empresa'}
+        %img.brand-img{ src: 'http://enginir-demo.creativesplanet.com/oilgas/wp-content/uploads/sites/7/2018/11/client-2.png', alt: 'Logo empresa'}
+        %img.brand-img{ src: 'http://enginir-demo.creativesplanet.com/oilgas/wp-content/uploads/sites/7/2018/11/client-6.png', alt: 'Logo empresa'}
+        %img.brand-img{ src: 'http://enginir-demo.creativesplanet.com/oilgas/wp-content/uploads/sites/7/2018/11/client-3.png', alt: 'Logo empresa'}
+        %img.brand-img{ src: 'http://enginir-demo.creativesplanet.com/oilgas/wp-content/uploads/sites/7/2018/11/client-4.png', alt: 'Logo empresa'}
+        %img.brand-img{ src: 'http://shtheme.net/demosd/metallex3/wp-content/uploads/2018/05/client_img3.jpg', alt: 'Logo empresa'}
+        %img.brand-img{ src: 'http://shtheme.net/demosd/metallex3/wp-content/uploads/2018/05/client_img4.jpg', alt: 'Logo empresa'}
 = Haml::Engine.new(File.read("app/partials/_footer.haml")).render()
 = Haml::Engine.new(File.read("app/partials/_scripts.haml")).render()
