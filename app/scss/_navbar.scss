@@ -2,7 +2,7 @@
 .header-area.main-header {
   padding: 15px 30px;
   background: $white;
-  border-radius: 5px;
+  border-radius: $radius;
   margin: 0 5%;
   position: relative;
   z-index: 2;
@@ -144,7 +144,7 @@
   right: 15px;
   background: $primary;
   padding: 7px 10px;
-  border-radius: 3px;
+  border-radius: $radius;
   transition: all ease-in-out .2s;
   cursor: pointer;
   display: none;

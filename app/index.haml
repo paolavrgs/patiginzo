@@ -6,7 +6,7 @@
       %h1 Un box que estará lleno de inspiración, clase, aspiraciones y sueños
     %img{ src: 'assets/img/IMG_0566.jpg', alt: '' }
   %section.about{style:'padding-top:100px;'}
-    .container.d-flex
+    .container.d-flex.about-text-parent
       .about-text
         %h1 ¿Qué es?
         %p La idea de poder compartir siempre ha sido gran parte de lo que ha llevado haciendo Pati en su vida, está en su esencia, en lo que la gente puede entender en sus redes sociales.
@@ -46,7 +46,7 @@
         - 3.times do
           .col-md-4.d-flex
             .blog-entry.justify-content-end
-              %a.block-20{href: "#", style: "background-image: url('https://images.unsplash.com/photo-1562887189-e5d078343de4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80');"}
+              %a.block-20{href: "/blog-single.html", style: "background-image: url('https://images.unsplash.com/photo-1562887189-e5d078343de4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80');"}
               .text.p-4.float-right.d-block
                 .d-flex.align-items-center.pt-2.mb-4
                   .one
@@ -55,8 +55,10 @@
                     %span.mos Agosto
                     %span.yr 2019
                 %h3.heading.mt-2
-                  %a{href: "#"} Why Lead Generation is Key for Business Growth
+                  %a{href: "/blog-single.html"} Why Lead Generation is Key for Business Growth
                 %p A small river named Duden flows by their place and supplies it with the necessary regelialia.
+        .col.text-center
+          %a.btn.template-btn{href:'/blog.html'} Ver todos los posts
   %section.faq
     .team-svg.d-none.d-sm-block
       .svgs.parallax
