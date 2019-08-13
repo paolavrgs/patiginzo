@@ -1,0 +1,43 @@
+= Haml::Engine.new(File.read("app/partials/_head.haml")).render()
+%body
+  = Haml::Engine.new(File.read("app/partials/_navbar.haml")).render()
+  %section.product-section
+    .container
+      .row
+        .col-lg-6
+          .product-pic-zoom
+            %img{alt: "", src: "https://images.unsplash.com/photo-1515688594390-b649af70d282?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"}
+            %img{alt: "", src: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"}
+          .product-thumbs-track
+            %img{alt: "", src: "https://images.unsplash.com/photo-1515688594390-b649af70d282?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"}
+            %img{alt: "", src: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"}
+        .col-lg-6.product-details
+          %h2.p-title Caja de Pati Deluxe
+          %h3.p-price $39.90
+          .fw-size-choose
+            .quantity
+              %p Cantidad
+              .pro-qty
+                %input{type: "text", value: "1"}
+          %a.btn.template-btn{href: "#"} Comprar
+          #product.accordion.mt-5
+            .card
+              .card-header{ id: "heading-1" }
+                %h5.mb-0
+                  %button.btn.btn-link.faq-btn{"aria-controls" => "collapse-1", "aria-expanded" => "true", "data-target" => "#collapse-1", "data-toggle" => "collapse", type: "button"}
+                    Descripción
+                    %i.fa.fa-chevron-down
+              .collapse{ class: "show", id: "collapse-1", "aria-labelledby" => "heading-1", "data-parent" => "#product"}
+                .card-body
+                  %p Dentro de esta caja, podrás encontrar entre 6 u 8 productos de primer nivel, los que serán previamente filtrados para entregar solo productos en los que creemos y estamos seguras de que serán lo tu necesitas. 
+            .card
+              .card-header{ id: "heading-2" }
+                %h5.mb-0
+                  %button.btn.btn-link.faq-btn{"aria-controls" => "collapse-2", "aria-expanded" => "false", "data-target" => "#collapse-2", "data-toggle" => "collapse", type: "button"}
+                    Tipo de despacho
+                    %i.fa.fa-chevron-down
+              .collapse{ id: "collapse-2", "aria-labelledby" => "heading-2", "data-parent" => "#product"}
+                .card-body
+                  %p Dentro de esta caja, podrás encontrar entre 6 u 8 productos de primer nivel, los que serán previamente filtrados para entregar solo productos en los que creemos y estamos seguras de que serán lo tu necesitas. 
+  = Haml::Engine.new(File.read("app/partials/_footer.haml")).render()
+  = Haml::Engine.new(File.read("app/partials/_scripts.haml")).render()

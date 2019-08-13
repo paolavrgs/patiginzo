@@ -450,17 +450,17 @@ li {
   }
 }
 
-.faq .card {
+.card {
   border: 0;
 }
 
-.faq .card-header {
+.card-header {
   background-color: #fff;
   margin-bottom: 0 !important;
   box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
 }
 
-.faq .faq-btn {
+.faq-btn {
   color: #cd416c;
   font-family: "Montserrat", serif;
   width: 100%;
@@ -470,16 +470,12 @@ li {
   justify-content: space-between;
 }
 
-.faq .faq-btn:hover, .faq .faq-btn:focus {
+.faq-btn:hover, .faq-btn:focus {
   text-decoration: none;
 }
 
-.faq .faq-btn[aria-expanded="true"] i {
+.faq-btn[aria-expanded="true"] i {
   transform: rotate(-90deg);
-}
-
-.faq-img img {
-  width: 100%;
 }
 
 .blog-entry {
@@ -1035,4 +1031,105 @@ span.after {
 
 .slick-next:before {
   content: "\f054";
+}
+
+.product-section {
+  padding: 50px 0;
+}
+
+.product-details .p-price {
+  font-size: 24px;
+  color: #414141;
+  font-weight: 600;
+  font-family: "Montserrat", serif;
+  margin-bottom: 20px;
+}
+
+.product-details .p-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #414141;
+  margin-bottom: 18px;
+}
+
+.quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.quantity p {
+  float: left;
+  margin-right: 15px;
+  font-weight: 600;
+  color: #414141;
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.quantity .pro-qty {
+  width: 94px;
+  height: 36px;
+  border: 1px solid #ddd;
+  padding: 0 15px;
+  border-radius: 5px;
+  float: left;
+}
+
+.quantity .pro-qty input {
+  width: 28px;
+  float: left;
+  border: none;
+  height: 36px;
+  line-height: 40px;
+  padding: 0;
+  font-size: 14px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.quantity .pro-qty .qtybtn {
+  width: 15px;
+  display: block;
+  float: left;
+  line-height: 36px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  color: #404040;
+}
+
+.product-pic-zoom {
+  height: 400px;
+}
+
+.product-pic-zoom img {
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-thumbs-track {
+  height: 100px;
+  margin-top: 30px;
+}
+
+.product-thumbs-track img {
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.product-thumbs-track .slick-list {
+  height: 100%;
+}
+
+.product-thumbs-track .slick-track {
+  height: 100%;
+  width: 100%;
 }
