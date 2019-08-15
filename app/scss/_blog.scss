@@ -162,22 +162,22 @@
     background-position: center center;
   }
 
-  .search-form .icon {
-    color: $primary;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
   .sidebar-subtitles {
     font-size: 18px;
     font-weight: 600;
     font-family: $heading-font;
     margin-bottom: 10px;
   }
+}
+
+.search-form .icon {
+  color: $primary;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .categories {
@@ -222,5 +222,13 @@
     @include size(100%);
     object-fit: cover;
     border-radius: $radius;
+  }
+}
+
+.blog-single {
+  h2 {
+    @include respond-to(xs) {
+      font-size: 25px;
+    }
   }
 }

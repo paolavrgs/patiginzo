@@ -1,0 +1,25 @@
+= Haml::Engine.new(File.read("app/partials/_head.haml")).render()
+%body
+  = Haml::Engine.new(File.read("app/partials/_navbar.haml")).render()
+  .container.mt-5.mb-5
+    .title-lines-main.text-center
+      %h3
+        %span.text Tienda de Productos
+    .row.d-flex
+      - 3.times do
+        .col-lg-4.col-md-6.col-sm-6.d-flex
+          .product-entry.justify-content-end
+            %a.block-20{href: "product.html", style: "background-image: url('https://images.unsplash.com/photo-1515688594390-b649af70d282?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');"}
+            .text.p-4.d-block
+              .d-flex.align-items-center.pt-2.mb-4
+                .price
+                  %span $39.99
+              %h3.heading.mt-2
+                %a{href: "product.html"} Caja de Pati Deluxe
+              %p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus corporis deserunt accusamus earum ad reprehenderit neque perferendis qui.
+              .product-bottom
+                %a.template-link{href:'product.html'} Ver más
+                %button.btn.template-btn
+                  %i.fa.fa-shopping-cart
+  = Haml::Engine.new(File.read("app/partials/_footer.haml")).render()
+  = Haml::Engine.new(File.read("app/partials/_scripts.haml")).render()

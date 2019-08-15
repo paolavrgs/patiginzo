@@ -17,14 +17,28 @@
       .title-lines-main.text-center
         %h3
           %span.text Producto Destacado
+      -# .single-item
+      -#   - 3.times do
+      -#     .product-banner{ style: "background-image: url('https://images.unsplash.com/photo-1559980828-dc98e2c105d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');" }
+      -#       .product-banner-figure
+      -#         .product-banner-content
+      -#           %h2
+      -#             La Caja de Pati Deluxe
+      -#             %span.after
+      -#           %p Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante. Etiam rhoncus.
+      -#           %a.btn.template-btn{href:'product.html'} Ver más detalles
       .product-banner{ style: "background-image: url('https://images.unsplash.com/photo-1559980828-dc98e2c105d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');" }
         .product-banner-figure
           .product-banner-content
             %h2
               La Caja de Pati Deluxe
               %span.after
-            %p Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante. Etiam rhoncus. Maecenas tempus, tellus eget condimentum oncus, sem quam semper. Aenean vulputate eleifend tellus. Aenean leo ligula
-            %a.btn.template-btn{href:'product.html'} Ver más detalles
+            %h3.price $39.90
+            %p Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante. Etiam rhoncus.
+            .product-bottom
+              %a.template-link{href:'product.html'} Ver más
+              %button.btn.template-btn
+                %i.fa.fa-shopping-cart
   %section.unboxing
     .maxw-770
       .video-wrap{ style: 'background-image: url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1065&q=80");' }
@@ -58,7 +72,7 @@
         .col.text-center
           %a.btn.template-btn{href:'blog.html'} Ver todos los posts
   %section.faq
-    .team-svg.d-none.d-sm-block
+    .faq-svg.d-none.d-sm-block
       .svgs.parallax
         %img.vector.pos-1{src: "assets/img/square.svg"}/
         %img.vector.pos-2{src: "assets/img/rectangular-shape-outline.svg"}/

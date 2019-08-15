@@ -4,11 +4,38 @@ WebFont.load({
   }
 });
 
+
+$('.single-item').slick({
+  infinite: true,
+  arrows: true,
+  fade: true
+});
+
 $('.multiple-items').slick({
   infinite: true,
   slidesToShow: 4,
   slidesToScroll: 4,
-  arrows: true
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: true,
+        arrows: false
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false
+      }
+    }
+  ]
 });
 
 /*-------------------

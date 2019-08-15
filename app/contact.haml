@@ -1,0 +1,34 @@
+= Haml::Engine.new(File.read("app/partials/_head.haml")).render()
+%body
+  = Haml::Engine.new(File.read("app/partials/_navbar.haml")).render()
+  .container.mt-5.mb-5
+    .contact-section
+      .faq-svg.d-none.d-sm-block
+        .svgs.parallax
+          %img.vector.pos-1{src: "assets/img/square.svg"}/
+          %img.vector.pos-2{src: "assets/img/rectangular-shape-outline.svg"}/
+          %img.vector.pos-3{src: "assets/img/triangle.svg"}/
+          %img.vector.pos-4{src: "assets/img/triangle.svg"}/
+          %img.vector.pos-5{src: "assets/img/rectangular-shape-outline.svg"}/
+          %img.vector.pos-6{src: "assets/img/square.svg"}/
+          %img.vector.pos-7{src: "assets/img/square.svg"}/
+          %img.vector.pos-8{src: "assets/img/triangle.svg"}/
+          %img.vector.pos-9{src: "assets/img/triangle.svg"}/
+      .title-lines-main.text-center
+        %h3
+          %span.text Contáctanos
+      .row.d-flex
+        .col-lg-6.offset-lg-3.contact-info
+          %form.contact-form
+            .form-group
+              %input.form-control{placeholder: "Nombre", type: "text"}/
+            .form-group
+              %input.form-control{placeholder: "Correo", type: "text"}/
+            .form-group
+              %input.form-control{placeholder: "Asunto", type: "text"}/
+            .form-group
+              %textarea.form-control{placeholder: "Mensaje"}
+            %center
+              %button.btn.template-btn Enviar
+  = Haml::Engine.new(File.read("app/partials/_footer.haml")).render()
+  = Haml::Engine.new(File.read("app/partials/_scripts.haml")).render()
